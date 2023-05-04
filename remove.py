@@ -6,20 +6,16 @@ def frequenzi(word):
 
         else:
             contador[i] = 1
-
-    values = list(contador.values())
-    # print(valores)
-    min_freq = min(values)
-    max_freq = max(values)
-
-    if min_freq == max_freq:
-        return True
-    elif values.count(min_freq) == 1 and min_freq == 1:
-        return True
-    elif values.count(max_freq) == 1 and max_freq == min_freq + 1:
-        return True
-    else:
+    verificar = 0
+    for c in contador:
+        if contador[c] > 2:
+            return False
+        if contador[c] == 2:
+            verificar += 1
+    if verificar > 1:
         return False
+    else:
+        return True
 
 
-print(frequenzi('aassszz'))
+print(frequenzi('aazz'))
