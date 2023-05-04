@@ -18,4 +18,4 @@ def frequenzi(word):
         return True
 
 
-print(frequenzi('aazz'))
+print(frequenzi('aaaz'))
