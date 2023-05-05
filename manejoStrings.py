@@ -19,3 +19,21 @@ def eliminarCaracteres(cadena):
 
 
 print(eliminarCaracteres('holi mundo!'))
+
+
+# Dado un string s, escribe un programa que cuente el número de ocurrencias de cada carácter en la cadena.
+# Por ejemplo, si s = "hello", el resultado debe ser {'h': 1, 'e': 1, 'l': 2, 'o': 1}.
+
+def contarFrequencias(cadena):
+    nuevo_set = {}
+    for str in cadena:
+
+        if str in nuevo_set:
+            nuevo_set[str] = nuevo_set[str]+1
+        else:
+            nuevo_set[str] = 1
+
+    return nuevo_set
+
+
+print(contarFrequencias('laluunu'))
