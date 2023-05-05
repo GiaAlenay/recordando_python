@@ -9,3 +9,13 @@ def invertir(palabra):
 
 
 print(invertir('holaaad'))
+
+
+# Dado un string s, escribe un programa que elimine todos los caracteres que no sean letras del alfabeto inglés.
+# Por ejemplo, si s = "Hello! World!", el resultado debe ser "HelloWorld"
+
+def eliminarCaracteres(cadena):
+    return ''.join(filter(str.isalpha, cadena))
+
+
+print(eliminarCaracteres('holi mundo!'))
