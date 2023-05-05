@@ -1,6 +1,9 @@
 # Dado un string s, escribe un programa que invierta la cadena.
 # Por ejemplo, si s = "hola", el resultado debe ser "aloh".
 
+import re
+
+
 def invertir(palabra):
     # re = list(palabra)
     # re.reverse()
@@ -62,3 +65,15 @@ def contarSubcadena(cadena, sub):
 
 
 print(contarSubcadena('holaa', 'a'))
+
+# Dado un string s, escribe un programa que cuente el número de palabras en la cadena.
+# Se considera que una palabra es cualquier secuencia de caracteres del alfabeto inglés
+# que esté delimitada por espacios en blanco o signos de puntuación.
+# Por ejemplo, si s = "Hola, mundo!", el resultado debería ser 2.
+
+
+def contarPalabras(cadena):
+    return len(re.findall(r'\w+', cadena))
+
+
+print(contarPalabras('hola, como te va !'))
