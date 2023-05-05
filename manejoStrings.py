@@ -1,7 +1,6 @@
+import re
 # Dado un string s, escribe un programa que invierta la cadena.
 # Por ejemplo, si s = "hola", el resultado debe ser "aloh".
-
-import re
 
 
 def invertir(palabra):
@@ -89,3 +88,28 @@ def replace(cadena, sub, newsub):
 
 
 print(replace('hola a todos', 'o', 'x'))
+
+# Dado un string s, escribe un programa que devuelva una nueva cadena que contenga solo
+# la primera letra de cada palabra en la cadena original.
+# Por ejemplo, si s = "Hola, mundo!", el resultado debería ser "H, m!".
+
+
+def primeraLetra(cadena):
+    # la = re.findall(r"\w+", cadena)
+    # return [l[0] for l in la]
+    # return list(map(lambda l: l[0], la))
+    getFirst = 1
+    new_list = []
+    for str in cadena:
+        if (ord(str) > 96 and ord(str) < 123) or (ord(str) > 64 and ord(str) < 91):
+            if getFirst == 1:
+                new_list.append(str)
+                getFirst = 2
+
+        else:
+            new_list.append(str)
+            getFirst = 1
+    return ''.join(new_list)
+
+
+print(primeraLetra("Hola, mundo!"))
