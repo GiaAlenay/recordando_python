@@ -131,3 +131,25 @@ def repetidos(cadena):
 
 
 print(repetidos('abcdefg'))
+
+# Dado un string s, escribe un programa que devuelva una nueva cadena que contenga
+# solo los caracteres que aparecen un número par de veces en la cadena original.
+# Por ejemplo, si s = "abbcccddddeeee", el resultado debería ser "bde".
+
+
+def mostrarPares(cadena):
+    diccionario_Cadena = {}
+    lista_pares = []
+    for str in cadena:
+        if str in diccionario_Cadena:
+            diccionario_Cadena[str] += 1
+        else:
+            diccionario_Cadena[str] = 1
+    for key in diccionario_Cadena:
+        if diccionario_Cadena[key] % 2 == 0:
+            lista_pares.append(key)
+
+    return ''.join(lista_pares)
+
+
+print(mostrarPares('abbcccddddeeee'))
