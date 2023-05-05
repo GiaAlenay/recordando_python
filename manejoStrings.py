@@ -113,3 +113,21 @@ def primeraLetra(cadena):
 
 
 print(primeraLetra("Hola, mundo!"))
+
+
+# Dado un string s, escribe un programa que compruebe si todos los caracteres en la cadena
+# son únicos (es decir, si no hay caracteres repetidos en la cadena).
+# Por ejemplo, si s = "abcdefg",
+# el resultado debería ser True, pero si s = "abccdefg", el resultado debería ser False.
+
+def repetidos(cadena):
+    # for str in cadena:
+    #     if cadena.count(str) > 1:
+    #         return False
+    # return True
+
+    is_unique = len(cadena) == len(set(cadena))
+    return is_unique
+
+
+print(repetidos('abcdefg'))
