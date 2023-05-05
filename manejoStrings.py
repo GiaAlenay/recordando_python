@@ -47,3 +47,18 @@ def palindromoV2(palabra):
 
 
 print(palindromoV2('anau'))
+
+# Dado un string s y una subcadena sub, escribe un programa que cuente el número de ocurrencias de la subcadena en la cadena.
+# Por ejemplo, si s = "hello world" y sub = "o", el resultado debería ser 2.
+
+
+def contarSubcadena(cadena, sub):
+    # contador = 0
+    # for ca in cadena:
+    #     if ca == sub:
+    #         contador += 1
+    # return contador
+    return cadena.count(sub)
+
+
+print(contarSubcadena('holaa', 'a'))
