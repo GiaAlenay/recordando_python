@@ -46,3 +46,23 @@ def cadenas_a(lista_cadenas):
 
 
 print(cadenas_a(["hola", "adiós", "Año", "amor"]))
+
+
+# Dada una lista de cadenas strings, escribe un programa que devuelva una nueva
+# lista que contenga solo las cadenas que sean anagramas de otra cadena en la lista.
+# Por ejemplo, si strings = ["cinema", "act", "tar", "cat", "silent"],
+# el resultado debería ser ["act", "cat"].
+
+def angramas(lista_cadenas):
+    lista_anagramas = []
+    for li in lista_cadenas:
+        for li2 in lista_cadenas:
+
+            if li != li2 and len(li) == len(li2) and set(li) == set(li2):
+                print(li)
+                lista_anagramas.append(li)
+
+    return lista_anagramas
+
+
+print(angramas(["cinema", "act", "tar", "cat", "silent"]))
