@@ -77,3 +77,15 @@ def contarPalabras(cadena):
 
 
 print(contarPalabras('hola, como te va !'))
+
+
+# Dado un string s y una subcadena sub, escribe un programa que reemplace todas las ocurrencias
+# de la subcadena en la cadena con otra cadena new_sub.
+# Por ejemplo, si s = "hello world", sub = "o" y new_sub = "x",
+# el resultado debería ser "hellx wxrld".
+
+def replace(cadena, sub, newsub):
+    return cadena.replace(sub, newsub)
+
+
+print(replace('hola a todos', 'o', 'x'))
