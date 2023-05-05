@@ -25,15 +25,25 @@ print(eliminarCaracteres('holi mundo!'))
 # Por ejemplo, si s = "hello", el resultado debe ser {'h': 1, 'e': 1, 'l': 2, 'o': 1}.
 
 def contarFrequencias(cadena):
-    nuevo_set = {}
+    contador = {}
     for str in cadena:
 
-        if str in nuevo_set:
-            nuevo_set[str] = nuevo_set[str]+1
+        if str in contador:
+            contador[str] = contador[str]+1
         else:
-            nuevo_set[str] = 1
+            contador[str] = 1
 
-    return nuevo_set
+    return contador
 
 
 print(contarFrequencias('laluunu'))
+
+
+# Dado un string s, escribe un programa que compruebe si la cadena es un palíndromo (es decir, si se lee igual de izquierda a derecha que de derecha a izquierda)
+# . Por ejemplo, si s = "racecar", el resultado debería ser True.
+
+def palindromoV2(palabra):
+    return palabra == palabra[::-1]
+
+
+print(palindromoV2('anau'))
