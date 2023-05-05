@@ -34,3 +34,15 @@ def multiplos(lista_numeros):
 
 
 print(multiplos([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+
+# Dada una lista de cadenas strings, escribe un programa que devuelva una nueva lista
+# que contenga solo las cadenas que empiezan por la letra "a".
+# Por ejemplo, si strings = ["hola", "adiós", "año", "amor"],
+# el resultado debería ser ["adiós", "año", "amor"].
+
+def cadenas_a(lista_cadenas):
+    return list(filter(lambda li: li[0].lower() == 'a', lista_cadenas))
+
+
+print(cadenas_a(["hola", "adiós", "Año", "amor"]))
