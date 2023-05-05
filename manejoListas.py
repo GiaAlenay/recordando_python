@@ -21,3 +21,16 @@ def leng_mayor_5(lista_cadenas):
 
 
 print(leng_mayor_5(["hola", "python", "mundo", "hoy"]))
+
+
+# Dada una lista de números nums, escribe un programa que devuelva una nueva
+# lista que contenga solo los números que sean múltiplos de 3 o de 5.
+# Por ejemplo, si nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+# el resultado debería ser [3, 5, 6, 9, 10].
+
+def multiplos(lista_numeros):
+    # return [li for li in lista_numeros if li % 3 == 0 or li % 5 == 0]
+    return list(filter(lambda li: li % 5 == 0 or li % 3 == 0, lista_numeros))
+
+
+print(multiplos([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
