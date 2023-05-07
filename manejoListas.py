@@ -66,3 +66,35 @@ def angramas(lista_cadenas):
 
 
 print(angramas(["cinema", "act", "tar", "cat", "silent"]))
+
+
+# Dada una lista de números nums, escribe un programa que devuelva una nueva lista que
+# contenga solo las secuencias de números consecutivos más largas de la lista original.
+# Por ejemplo, si nums = [1, 2, 3, 5, 6, 7, 8, 9, 10],
+# el resultado debería ser [[5, 6, 7, 8, 9, 10]].
+
+def consecutivos(lista_num):
+    lista_consecutivos = []
+    index = 0
+    index2 = 0
+    for l1 in range(0, len(lista_num), 1):
+
+        if len(lista_consecutivos) == 0:
+            lista_consecutivos.append([lista_num[l1]])
+        if lista_consecutivos[index][index2]+1 == lista_num[l1]:
+            lista_consecutivos[index].append(lista_num[l1])
+            index2 += 1
+        else:
+            index += 1
+            index2 = 0
+            lista_consecutivos.append([lista_num[l1]])
+    max = []
+    for li in lista_consecutivos:
+
+        if len(li) > len(max):
+            max = li
+
+    return max
+
+
+print(consecutivos([1, 2, 3, 5, 6, 7, 8, 9, 10, 14, 15]))
