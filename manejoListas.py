@@ -98,3 +98,35 @@ def consecutivos(lista_num):
 
 
 print(consecutivos([1, 2, 3, 5, 6, 7, 8, 9, 10, 14, 15]))
+
+
+# Dada una lista de cadenas strings, escribe un programa que devuelva una nueva
+# lista que contenga solo las subsecuencias comunes más largas entre todas las cadenas
+# de la lista. Por ejemplo, si strings = ["abcdefg", "defgabc", "ghijkl"],
+# el resultado debería ser ["defg"].
+
+def subsecuencias(lista):
+    nueva_lista = [list(li) for li in lista]
+    minilista = []
+    for sublista in nueva_lista:
+        subsecuencia = []
+        index = 0
+        index2 = 0
+        for l1 in range(0, len(sublista), 1):
+
+            if len(subsecuencia) == 0:
+                subsecuencia.append([sublista[l1]])
+            if ord(subsecuencia[index][index2])+1 == ord(sublista[l1]):
+                subsecuencia[index].append(sublista[l1])
+                index2 += 1
+            else:
+                index += 1
+                index2 = 0
+                subsecuencia.append([sublista[l1]])
+
+        if len(max(subsecuencia, key=len)) > len(minilista):
+            minilista = max(subsecuencia, key=len)
+    return minilista
+
+
+print(subsecuencias(["abcdefg", "defgabc", "ghijkl"]))
