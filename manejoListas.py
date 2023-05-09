@@ -130,3 +130,9 @@ def subsecuencias(lista):
 
 
 print(subsecuencias(["abcdefg", "defgabc", "ghijkl"]))
+
+
+# Dada una lista de números nums, escribe un programa que devuelva una nueva
+# lista que contenga solo los núme eros que sean la suma de dos números distintos
+# de la lista original. Por ejemplo, si nums = [2, 3, 4, 6, 8, 9, 10, 12],
+# el resultado debería ser [6, 8, 10].
