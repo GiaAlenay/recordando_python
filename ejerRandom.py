@@ -51,3 +51,18 @@ def cadena_desplazada(string,n):
 
     return ''.join(new_string)
 print(cadena_desplazada("Hello World!",1))
+
+
+# Escribe una función que tome una lista de palabras como entrada y devuelva 
+# un diccionario donde las claves sean las palabras y los valores sean el número
+# de veces que aparece cada palabra en la lista.
+
+def lis_to_dic(lista):
+    new_dictionary={}
+    for li in lista:
+        if li in new_dictionary:
+            new_dictionary[li]=new_dictionary[li]+1
+        else:
+            new_dictionary[li]=1
+    return new_dictionary
+print(lis_to_dic(["lla",'de','ju','lla','na','na','na']))
