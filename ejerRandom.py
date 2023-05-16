@@ -77,3 +77,19 @@ def anagramas(str1,str2):
     return sorted(str1)== sorted(str2)
 
 print(anagramas('nana','anna'))
+
+
+
+# Validar paréntesis: Escribe una función que tome una cadena de texto que contiene 
+# paréntesis y devuelva True si los paréntesis están 
+# correctamente balanceados, y False en caso contrario.
+
+def parentesis_balanciado(str):
+    counter=0
+    for i in str:
+        if ord(i)==40:
+            counter+=1
+        if ord(i)==41:
+            counter-=1
+    return counter==0
+print(parentesis_balanciado("((())))"))
