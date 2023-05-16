@@ -93,3 +93,17 @@ def parentesis_balanciado(str):
             counter-=1
     return counter==0
 print(parentesis_balanciado("((())))"))
+
+# Encontrar el número faltante: Escribe una función que tome una lista de números 
+# del 1 al n (excepto uno) como entrada y devuelva el número faltante.
+
+def faltante(lista):
+    order_lista=sorted(lista)
+    anterior=order_lista[0]
+    for li in range(1,len(order_lista)):
+        if anterior+1 !=order_lista[li]:
+            return anterior+1
+        else:
+            anterior=order_lista[li]
+    return'estan completos'
+print(faltante([1,7,5,6,4,3,2]))
