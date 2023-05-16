@@ -66,3 +66,14 @@ def lis_to_dic(lista):
             new_dictionary[li]=1
     return new_dictionary
 print(lis_to_dic(["lla",'de','ju','lla','na','na','na']))
+
+
+
+# Escribe una función que tome dos cadenas de texto como entrada y 
+# devuelva True si son anagramas (es decir, si se pueden 
+# formar una a partir de las letras de la otra) y False en caso contrario.
+
+def anagramas(str1,str2):
+    return sorted(str1)== sorted(str2)
+
+print(anagramas('nana','anna'))
