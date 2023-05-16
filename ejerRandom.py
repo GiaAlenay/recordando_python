@@ -27,3 +27,11 @@ def sumar_pares_lista(lista):
     return sum([li for li in lista if li%2==0 ])
 
 print(sumar_pares_lista([46,5,8,7,6,1]))
+
+# Escribe una función que tome una lista de números como entrada y devuelva 
+# la suma de los números pares.
+
+def largo_cadena(string):
+    return len(''.join(string.split()))
+
+print(largo_cadena("welcome to the jungle"))
