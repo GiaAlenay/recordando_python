@@ -35,3 +35,19 @@ def largo_cadena(string):
     return len(''.join(string.split()))
 
 print(largo_cadena("welcome to the jungle"))
+
+# Escribe una función que tome una cadena de texto como entrada y devuelva una
+#  nueva cadena donde cada letra se desplace un número fijo de posiciones en el 
+# alfabeto (por ejemplo, si el número es 2, la letra 'a' se convertirá en 'c', la letra 
+# 'b' se convertirá en 'd', y así sucesivamente).
+
+def cadena_desplazada(string,n):
+    new_string=[]
+    for str in string:
+        if ord(str) != 32:
+            new_string.append(chr(ord(str)+n))
+        else:
+            new_string.append(str)
+
+    return ''.join(new_string)
+print(cadena_desplazada("Hello World!",1))
