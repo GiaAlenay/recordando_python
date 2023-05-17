@@ -124,3 +124,13 @@ def inversiones(lista):
 print(inversiones([2, 4, 1, 3, 5]))
 
 
+# Encontrar el segundo número más grande: Escribe una función que tome una lista de 
+# números como entrada y devuelva el segundo número más grande de la lista.
+
+def segundo_mayor(lista):
+    maximo=max(lista)
+    lista.remove(maximo)
+    return max(lista)
+print(segundo_mayor([10, 5, 8, 12, 3]))
+
+
