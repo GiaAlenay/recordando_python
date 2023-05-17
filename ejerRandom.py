@@ -107,3 +107,20 @@ def faltante(lista):
             anterior=order_lista[li]
     return'estan completos'
 print(faltante([1,7,5,6,4,3,2]))
+
+
+# Calcular el número de inversiones: Escribe una función que tome una lista de números 
+# como entrada y devuelva el número de inversiones en la lista. Una inversión se 
+# produce cuando un número 
+# mayor aparece antes que un número menor en la lista.
+
+def inversiones(lista):
+    lista_inversiones=[]
+    for i in range(0,len(lista)):
+        for a in range(i+1, len(lista)):
+            if lista[a]<lista[i]:
+                lista_inversiones.append((lista[i],lista[a]))
+    return len(lista_inversiones)
+print(inversiones([2, 4, 1, 3, 5]))
+
+
