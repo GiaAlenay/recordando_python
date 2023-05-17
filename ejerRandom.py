@@ -134,3 +134,9 @@ def segundo_mayor(lista):
 print(segundo_mayor([10, 5, 8, 12, 3]))
 
 
+# Ordenar una lista de cadenas por longitud: Escribe una función que tome una lista de cadenas
+# como entrada y devuelva la lista ordenada por longitud de las cadenas, de menor a mayor.
+
+def ordenar_cadenas(lista):
+    return sorted(lista, reverse=True)
+print(ordenar_cadenas(["Python", "es", "divertido"]))
