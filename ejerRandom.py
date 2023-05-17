@@ -140,3 +140,13 @@ print(segundo_mayor([10, 5, 8, 12, 3]))
 def ordenar_cadenas(lista):
     return sorted(lista, reverse=True)
 print(ordenar_cadenas(["Python", "es", "divertido"]))
+
+
+# Eliminar elementos duplicados de una lista: Escribe una función que tome una
+# lista como entrada y devuelva una nueva lista que contenga los elementos únicos en el mismo
+# orden en que aparecen en la lista original.
+
+def eliminar_duplicados(lista):
+    newset=set(lista)
+    return list(newset)
+print(eliminar_duplicados([1, 2, 2, 3, 4, 4, 5]))
