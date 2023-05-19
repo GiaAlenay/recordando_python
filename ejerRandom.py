@@ -164,3 +164,21 @@ def fibonacci(n):
     else:
         return fibonacci(n-1) + fibonacci(n-2)
 print(fibonacci(2))
+
+
+
+
+# Encontrar el mayor producto de tres elementos consecutivos: Escribe una función que tome 
+# una lista de números enteros como entrada y devuelva el mayor producto que se puede
+# obtener al multiplicar tres números consecutivos en la lista.
+
+def mayor_producto(lista):
+    mayor=0
+    for i in range(0,len(lista)-2):
+        for j in range(1,len(lista)-1):
+            for a in range(2,len(lista)):
+                if lista[i]+2==lista[a] and lista[i]+1==lista[j] and lista[i]*lista[j]*lista[a]>mayor:
+                    mayor=lista[i]*lista[j]*lista[a]
+        
+    return mayor
+print(mayor_producto([1, 2, 3, 4, 3,5,6,7]))
