@@ -182,3 +182,19 @@ def mayor_producto(lista):
         
     return mayor
 print(mayor_producto([1, 2, 3, 4, 3,5,6,7]))
+
+
+# Encontrar los números primos gemelos: Escribe una función que tome un número 
+# entero n como entrada y devuelva una lista de tuplas que representen los pares 
+# de números primos gemelos menores que n. Los números primos gemelos son dos números
+# primos que difieren en 2.
+
+
+def primos_gemelos(n):
+    lista=[]
+    
+    for i in range(1,n):
+        print(i)
+       
+    return lista
+print(primos_gemelos(20)
